@@ -1,30 +1,18 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include "cifrar.h"
 
 using namespace std;
 
 string digitado;
-
-void cifrando(string digito){
-	for(int i = 0; i < digito.length(); i++){
-		cout << static_cast<char>(digito[i] + 2);
-	}
-	cout << endl;
-}
-
-void decifrando(string digito){
-	for(int i = 0; i < digito.length(); i++){
-		cout << static_cast<char>(digito[i] - 2);
-	}
-}
 
 void menu(){
 	int entrada;
 	do{
 		cout << "Digite 1 para cifrar uma frase\n";
 		cout << "Digite 2 para decifrar uma frase\n";
-		cout << "Digite 0 para sair\n";
+		cout << "Digite 20 para sair\n";
 		cout << "Digite aqui: ";
 		string buf;
 	    getline(cin, buf);
@@ -33,20 +21,23 @@ void menu(){
 	    
 		switch(entrada){
 		case 1:
-			cout << "digite uma palavra: ";
-			getline (cin,digitado);
-			cifrando(digitado);
+			cifrando();
+			entrada = 0;
 			break;
 		case 2:
 			cout << "digite a palavra cifrada: ";
 			getline (cin,digitado);
-			decifrando(digitado);
+			//decifrando(digitado);
+			entrada = 0;
+			break;
+		case 20:
+			cout << "\n\n\n\nFim de utiliza‡Æo";
 			break;
 		default: 
 			cout << "Digite um valor valido";
 			break;
 		}
-	}while(entrada != 0);
+	}while(entrada != 20);
 }
 
 int main()
