@@ -2,10 +2,9 @@
 #include <string>
 #include <sstream>
 #include "cifrar.h"
+#include "decifrar.h"
 
 using namespace std;
-
-string digitado;
 
 void menu(){
 	int entrada;
@@ -25,13 +24,11 @@ void menu(){
 			entrada = 0;
 			break;
 		case 2:
-			cout << "digite a palavra cifrada: ";
-			getline (cin,digitado);
-			//decifrando(digitado);
+			decifrando();
 			entrada = 0;
 			break;
 		case 20:
-			cout << "\n\n\n\nFim de utiliza‡Æo";
+			cout << "\n\n\n\nFim de utilizacao";
 			break;
 		default: 
 			cout << "Digite um valor valido";
@@ -40,8 +37,9 @@ void menu(){
 	}while(entrada != 20);
 }
 
-int main()
-{
+int main(){
+
 	menu();
+
     return 0;       
 }

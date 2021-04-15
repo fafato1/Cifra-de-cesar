@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void cifrando(){
+void cifrango(){
 	string frase;
 	int digipular;
 	cout << "digite uma palavra: ";
