@@ -13,5 +13,7 @@ void decifrando(){
 	for(int i = 0; i < frase.length(); i++){
 		cout << static_cast<char>(frase[i] - digipular);
 	}
-	cout << endl;
+	cout << endl << endl;
+	frase.clear();
+	digipular = 0;
 }
