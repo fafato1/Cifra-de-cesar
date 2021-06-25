@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void decifrando(){
+void decesar(){
 	string frase;
 	int digipular;
 	cout << "digite uma palavra: ";
